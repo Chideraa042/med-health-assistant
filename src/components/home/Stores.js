@@ -1,0 +1,12 @@
+import React from 'react'
+import apple_logo from '../assets/app_store.svg';
+import google_logo from '../assets/google_play.svg';
+
+export const Stores = () => {
+  return (
+    <div className="download">
+        <img className='AppStore' src={apple_logo} alt='AppStore_logo' />
+        <img className='GooglePlay' src={google_logo} alt='GooglePlay_logo' />
+    </div>
+  )
+}
