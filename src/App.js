@@ -7,8 +7,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Header /> 
-      <h1>Thanks for watching
-      </h1>
+      <h1>Thanks for Comming</h1>
     </div>
   );
 }
