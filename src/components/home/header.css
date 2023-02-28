@@ -93,3 +93,33 @@ div.dot_files img.dots_2{
     mix-blend-mode: multiply;
     opacity: 0.4;
 }
+
+/* ============== Media Queries (Medium Devices) ============= */
+@media screen and (max-width: 1024px) {
+    header{
+        height: 68vh;
+    }
+    
+}
+
+/* ============== Media Queries (Small Devices) ============= */
+@media screen and (max-width: 600px) {
+    header{
+        height: 100vh;
+    }
+    .home_files{
+        /* display: none; */
+    }
+    .text_1{
+        position: absolute;
+        left: 7.2rem;
+        top: 33%;
+        font-family: 'GT Walsheim Pro';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.3rem;
+        line-height: 2.63rem;
+        color: var(--color-black)
+    }
+    
+}

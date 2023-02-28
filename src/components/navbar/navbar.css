@@ -1,9 +1,16 @@
-.navigations{
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header.navigations{
     width: 100%;
     height: 12%;
     top: 0;
     position: fixed;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     background-color: var(--color-white);
     z-index: 100; 
@@ -20,9 +27,9 @@
 }
 
 
-nav a{
+nav.navigat a{
     position: relative;
-    top: 3.13rem;
+    top: 1.5rem;
     left: 2.4rem;
     text-transform:capitalize;
     
@@ -40,11 +47,24 @@ nav a{
     flex-grow: 0;
 }
 
-nav a:hover{
+nav.navigat a:hover{
     color: var(--color-blue);
 }
 
-button{
+header.navigations .nav-btn{
+    position: absolute;
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    visibility: hidden;
+    opacity: 0; 
+    font-size: 1.8rem; 
+}
+
+button.get_started{
     position: absolute;
     width: 9.5rem;
     height: 3rem;
@@ -69,3 +89,67 @@ button span{
     
     
 }
+
+/* ============== Media Queries (Medium Devices) ============= */
+@media screen and (max-width: 1024px) {
+    header.navigations{
+        align-items: center;
+        justify-content: space-between;
+    }
+    header.navigations .nav-btn{
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;  
+    }
+
+    header.navigations nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--color-blue);
+        transition: 1s;
+        /* transform: translateY(100vh); */
+    }
+
+    header.navigations .responsive_nav{
+        /* transform: none; */
+        transform: translateY(-100vh);
+    }
+
+    nav .nav-btn{
+       
+    }
+
+    nav.navigat a{
+        font-size: 1.5rem;
+        left: 0;
+        color: var(--color-white);
+    }
+
+}
+
+/* ============== Media Queries (Small Devices) ============= */
+/* @media screen and (max-width: 600px) {
+    .navigations{
+        height: 60vh;
+        align-items: center;
+    }
+    div.navigat a{
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .header__socials,
+    .scroll__down{
+        display: none;
+    }
+} */
