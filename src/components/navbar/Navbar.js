@@ -32,7 +32,7 @@ export const Navbar = () => {
         <button className='get_started'><span>Get Started</span> </button>
 
         
-        <button className='nav-btn' onClick={showNavbar} ><FaBars /></button>
+        <button className='nav-btn nav-show-btn' onClick={showNavbar} ><FaBars /></button>
     </header>
 
   )

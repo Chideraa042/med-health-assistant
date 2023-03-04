@@ -13,7 +13,8 @@ header.navigations{
     align-items: center;
     justify-content: space-around;
     background-color: var(--color-white);
-    z-index: 100; 
+    /* box-shadow: 0px 1px 5px var(--color-light); added box shadow underneath the nav */
+    z-index: 1; 
 }
 
 .med_logo {
@@ -91,7 +92,7 @@ button span{
 }
 
 /* ============== Media Queries (Medium Devices) ============= */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     header.navigations{
         align-items: center;
         justify-content: space-between;
@@ -117,6 +118,7 @@ button span{
         gap: 1.5rem;
         background-color: var(--color-blue);
         transition: 1s;
+        z-index: 2;
         /* transform: translateY(100vh); */
     }
 
@@ -125,8 +127,8 @@ button span{
         transform: translateY(-100vh);
     }
 
-    nav .nav-btn{
-       
+    header.navigations .nav-show-btn{
+       color: var(--color-blue);
     }
 
     nav.navigat a{

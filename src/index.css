@@ -30,10 +30,14 @@
   body{
     font-family: 'Poppins', 'sans-serif', 'Sora';
     /* background: var(--color-bg); */
-    background: var(--color-blue);
-    background-image: url("./components/assets/Background.svg");
-    background-repeat: no-repeat;
-    background-size: 101% 104vh;   /* Not that the vh and wh values are same as its equivalent % values*/
     color: var(--color-white);
     line-height: 1.7;
   }
+
+.flex {
+  display: flex;
+}
+
+.g-10 {
+  gap: 10px
+}
