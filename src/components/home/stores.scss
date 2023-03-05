@@ -1,0 +1,16 @@
+main.download_main {
+
+  & > div.download {
+		position: absolute;
+    display: flex;
+    gap: 1rem;
+    height: 2.81rem;
+    width: 0.63rem;
+
+    left: 7.2rem;
+    top: 3rem;
+    border-radius: 0px;
+    cursor: pointer;
+    
+  }
+}
