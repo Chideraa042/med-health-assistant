@@ -30,7 +30,7 @@
   body{
     font-family: 'Poppins', 'sans-serif', 'Sora';
     /* background: var(--color-bg); */
-    color: var(--color-white);
+    /* color: var(--color-white); */
     line-height: 1.7;
   }
 

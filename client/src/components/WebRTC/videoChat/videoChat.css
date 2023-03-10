@@ -1,0 +1,19 @@
+main.videoClass{
+  background-color: var(--color-blue);
+  /* background: var(--color-blue); */
+  color: var(--color-white);
+}
+
+/* video {
+  width: '550px';
+} */
+
+/* gridContainer {
+  justify-content: center;
+}
+
+paper {
+  padding: 10px;
+  border: 2px solid black;
+  margin: 10px;
+} */
