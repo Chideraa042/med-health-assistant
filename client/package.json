@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/simple-peer": "^9.11.5"
   }
 }
