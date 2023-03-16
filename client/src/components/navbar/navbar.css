@@ -17,21 +17,27 @@ header.navigations{
     z-index: 10; 
 }
 
+/* .med_logo {
+    position: absolute;
+    width: 38.71px;
+    height: 37px;
+    left: 5.63rem;
+    top: 2.06rem;
+}
+
 .med_logo {
     position: absolute;
     width: 38.71px;
     height: 37px;
     left: 5.63rem;
     top: 2.06rem;
-
-
-}
+} */
 
 
 nav.navigat a{
     position: relative;
     top: 1.5rem;
-    left: 15rem;
+    left: 5rem;
     text-transform:capitalize;
     
     padding: 0.94rem;

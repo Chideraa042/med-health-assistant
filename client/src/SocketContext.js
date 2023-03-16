@@ -53,7 +53,7 @@ const socket = io('http://localhost:5000');
     }
 
     const callUser = (id) => {
-        const peer = new Peer({ initiator: true, trickle: false, stream });
+        const peer = new Peer({ initiator: true, trickle: true, stream });
 
         peer.on('signal', (data) => {
             socket.emit('calluser', { userToCall: id, signalData: data, from: me, name })

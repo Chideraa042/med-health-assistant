@@ -2,9 +2,11 @@ import React from 'react'
 import { useRef } from 'react';
 import './navbar.css'
 import { useState } from 'react'
-import medHealth from '../assets/med_health_log.svg';
+// import medHealth from '../assets/med_health_log.svg';
+// import medName from '../assets/med_name_log.svg';
 import { FaTimes, FaBars } from "react-icons/fa"
 import { Link } from 'react-router-dom';
+import { Logo } from './Logo';
 
 export const Navbar = () => {
   
@@ -19,7 +21,9 @@ export const Navbar = () => {
   return (
   
       <header className='navigations'>
-        <img className='med_logo' src={medHealth} alt='medHealth_logo' />
+        {/* <img className='med_logo' src={medHealth} alt='medHealth_logo' />
+        <img className='med_name' src={medName} alt='medName_logo' /> */}
+        <Logo />
 
         <nav ref={navRef} className='navigat'>
             <a onClick={() => setActiveNav('/')} className={ activeNav === '/' ? 'active' : ''} href='/'>Home</a>

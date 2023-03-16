@@ -1,0 +1,31 @@
+main.med_logos_main {
+
+  & > div.med_logos {
+		position: absolute;
+    display: flex;
+    left: 5.5rem;
+    gap: 1rem;
+    top: 2.06rem;
+
+    // height: 2.81rem;
+    // width: 0.63rem;
+
+    // left: 7.2rem;
+    // top: 3rem;
+    // border-radius: 0px;
+    // cursor: pointer;
+
+    & > img.med_logo {
+      width: 38.71px;
+      height: 37px;
+      
+    }
+
+    & > img.med_name {
+      // width: 38.71px;
+      // height: 37px;
+      padding-top: 0.8rem;
+    }
+    
+  }
+}

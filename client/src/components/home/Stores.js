@@ -1,4 +1,5 @@
 import React from 'react'
+import './stores.scss'
 import apple_logo from '../assets/app_store.svg';
 import google_logo from '../assets/google_play.svg';
 
