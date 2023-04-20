@@ -11,14 +11,18 @@ import { Notifications } from '../notifications/Notifications';
 
 const useStyles = makeStyles((theme) => ({
     AppBar: {
-        borderRadius: 15,
-        margin: '30px 100px',
+        borderRadius: 10,
+        margin: '100px',
+        marginBottom: '15px',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
+        color: 'var(--color-blue)',
+        padding: '5px',
         alignItems: 'center',
-        width: '600px',
+        width: '500px',
         border: '2px solid black',
+        zIndex: 1,
 
         [theme.breakpoints.down('xs')]: {
             width: '90%',
@@ -40,13 +44,13 @@ export const VideoChat = () => {
   return (
     <main className='videoClass'>
         <div className={classes.wrapper}>
+            {/* <h1>Welcome Home To the Video Section</h1>
             <h1>Welcome Home To the Video Section</h1>
             <h1>Welcome Home To the Video Section</h1>
-            <h1>Welcome Home To the Video Section</h1>
-            <h1>Welcome Home To the Video Section</h1>
+            <h1>Welcome Home To the Video Section</h1> */}
 
             <AppBar className={classes.AppBar} position='static' color='inherit'>
-                <Typography variant='h2' color='primary' align='center'>Video Chat</Typography>
+                <Typography variant='h4' color='' align='center'>Doctors Appointment</Typography>
             </AppBar>
 
           

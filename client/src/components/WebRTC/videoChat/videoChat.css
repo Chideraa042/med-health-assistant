@@ -1,5 +1,6 @@
 main.videoClass{
   background-color: var(--color-blue);
+  /* background-image: url("../../../components/assets/Background.svg"); */
   /* background: var(--color-blue); */
   color: var(--color-white);
 }
@@ -17,3 +18,14 @@ paper {
   border: 2px solid black;
   margin: 10px;
 } */
+/* div.home_files {
+  padding: 7.5vmax;
+  // height: 100%;
+  // width: 100%;
+  position: relative;
+  height: calc(100% - 0px);
+  background-image: url("../../components/assets/Background.svg");
+  background-repeat: no-repeat;
+  background-size: 100vmax   ;
+  // background-size: cover ;
+  // z-index: -2;   */

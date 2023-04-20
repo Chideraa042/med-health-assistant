@@ -23,7 +23,11 @@ export const Navbar = () => {
       <header className='navigations'>
         {/* <img className='med_logo' src={medHealth} alt='medHealth_logo' />
         <img className='med_name' src={medName} alt='medName_logo' /> */}
-        <Logo />
+        <Link to="/">
+            <Logo />
+        </Link>
+        
+        
 
         <nav ref={navRef} className='navigat'>
             <a onClick={() => setActiveNav('/')} className={ activeNav === '/' ? 'active' : ''} href='/'>Home</a>
@@ -36,7 +40,7 @@ export const Navbar = () => {
             <button className='nav-btn nav-close-btn' onClick={showNavbar} ><FaTimes /></button>
         </nav>
 
-        <Link to="/video">
+        <Link to="/login">
             <button className='get_started'><span>Get Started</span> </button>
         </Link>
         

@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
   container: {
     width: '50%',
-    margin: '35px 0',
+    margin: '15px 0',
     padding: 0,
     [ theme.breakpoints.down('xs')]: {
       width: '80%',
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   
   margin: {
     marginTop: 20,
+    backgroundColor: 'var(--color-blue)',
   },
   
   padding: {

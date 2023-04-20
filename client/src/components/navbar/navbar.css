@@ -13,25 +13,9 @@ header.navigations{
     align-items: center;
     justify-content: space-around;
     background-color: var(--color-white);
-    /* box-shadow: 0px 1px 5px var(--color-light); added box shadow underneath the nav */
-    z-index: 10; 
+    /* box-shadow: 0px 1px 5px var(--color-light); added box shadow underneath the nav  */
+    z-index: 5; 
 }
-
-/* .med_logo {
-    position: absolute;
-    width: 38.71px;
-    height: 37px;
-    left: 5.63rem;
-    top: 2.06rem;
-}
-
-.med_logo {
-    position: absolute;
-    width: 38.71px;
-    height: 37px;
-    left: 5.63rem;
-    top: 2.06rem;
-} */
 
 
 nav.navigat a{

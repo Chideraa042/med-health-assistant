@@ -1,0 +1,186 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 72px;
+  gap: 25px;
+  z-index: 6;
+
+  position: absolute;
+  width: 460px;
+  height: 400px;
+  left: 790px;
+  top: 160px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  
+
+  h2 {
+    width: 267px;
+    height: 28px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 100%;
+    margin-top: 15px;
+    // padding: 50px;
+
+    text-align: center;
+    // margin-bottom: 0px;
+    color: #101012;
+  }
+
+  form {
+    .forgot{
+      display: flex;
+      justify-content: space-between;
+      // margin-bottom: 5px;
+      margin-top: 15px;
+      color: #5A5A5D;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+    
+    }
+    .form-group {
+      // margin-bottom: 20px;
+
+    &> label {
+        display: block;
+        margin-bottom: 5px;
+        height: 16px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        color: #5A5A5D;
+      }
+
+      input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 16px;
+        gap: 5px;
+        height: 48px;
+        border-radius: 8px;
+        width: 100%;
+        // padding: 10px;
+        border: 1px solid #ccc;
+        
+        font-size: 16px;
+        outline: none;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 1;
+
+        &:focus {
+          // border-color: #0077cc;
+          border: 3px solid #E0EFFE;
+        }
+      }
+
+      //=========CODE FOR EYE ICON==============
+
+      .password-input-container {
+        position: relative;
+      }
+      
+      .password-input-container input {
+        padding-right: 30px; /* add space for eye icon */
+      }
+      
+      .password-input-container div {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        bottom: 0;
+        width: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #BEBEBF;
+      }
+      
+
+
+      button{
+        font-style: normal;
+        color: #fff;
+        font-size: 16px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        line-height: 100%;
+        height: 16px;
+
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        gap: 5px;
+        margin-top: 28px;
+
+        width: 22rem;
+        height: 3.25rem;
+
+        background: #0957DF;
+        border-radius: 8px;
+
+        &:hover {
+          background-color: #005fa3;
+        }
+      }
+    }
+  }
+
+
+  .forgot-password,
+  .signup {
+    
+    // display: flex;
+    // align-items: center;
+    // gap: 8px;
+
+    a {
+      color: #007DFA;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  div.signup {
+    margin-top: 0px;
+    font-size: 14px;
+    color: #BEBEBF;
+    text-align: center;
+    height: 16px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+}

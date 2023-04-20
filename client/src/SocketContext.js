@@ -1,4 +1,4 @@
-import React, { createContext, useState, useRef, useEffect } from "react";
+import { createContext, useState, useRef, useEffect } from "react";
 import { io } from 'socket.io-client';
 import Peer from 'simple-peer';
 
@@ -8,7 +8,7 @@ const socket = io('http://localhost:5000');
 
  const ContextProvider = ({ children }) => {
     const [stream, setStream] = useState(null);
-    const [me, setMe] = useState('');
+    const [me, setMe] = useState(true); //Copies ID to clipboard
     const [call, setCall] = useState({});
     const [callAccepted, setCallAccepted] = useState(false);
     const [callEnded, setCallEnded] = useState(false);
