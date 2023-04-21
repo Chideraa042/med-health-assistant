@@ -1,0 +1,101 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 2rem;
+  .search-bar {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    input {
+      width: 50%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+  }
+  .general-overview {
+    background-color: #3f51b5;
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      margin: 0 0 0.5rem 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .doctors-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    .doctor-card {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+      }
+      .doctor-info {
+        margin-left: 1rem;
+        h3 {
+          margin: 0 0 0.5rem 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .patients-list {
+    h2 {
+      margin: 0 0 0.5rem 0;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f0f0f0;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        .patient-name {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .consultation {
+    h2 {
+      margin: 0 0 0.5rem 0;
+    }
+    .consultation-calendar {
+      background-color: #f0f0f0;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .consultation-details {
+      background-color: #f0f0f0;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+  }
+}
