@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import './form.scss';
+import { Link } from 'react-router-dom';
 
 export const Form = () => {
 
@@ -120,7 +121,8 @@ export const Form = () => {
         </div>
 
         <div className="form-group">
-           <button type="submit">{showLogin ? 'Login now' : 'Create account'}</button>
+        <Link to="/dashboard"><button type="submit">{showLogin ? 'Login now' : 'Create account'}</button></Link>
+           {/* <button type="submit">{showLogin ? 'Login now' : 'Create account'}</button> */}
         </div> 
         
         

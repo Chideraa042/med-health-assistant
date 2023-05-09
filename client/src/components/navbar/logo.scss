@@ -5,14 +5,14 @@ main.med_logos_main {
 		position: absolute;
     display: flex;
     left: 5.5rem;
-    gap: 1rem;
+    gap: 0.9rem;
     top: 2.06rem;
     cursor: pointer;
     
 
     & > img.med_logo {
-      width: 38.71px;
-      height: 37px;
+      width: 2rem;
+      height: 2.1rem;
       
       
     }
@@ -20,6 +20,7 @@ main.med_logos_main {
     & > img.med_name {
       // width: 38.71px;
       // height: 37px;
+      font-weight: 500;
       padding-top: 0.8rem;
     }
     
