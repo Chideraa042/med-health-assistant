@@ -1,0 +1,101 @@
+main.footer{
+  background-color: #1800A4;
+  color: #FFFFFF;
+  // font-family: 'Poppins';
+  
+  & > div.grid_system{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    margin: 0px 6.5rem;
+    gap: 2.9rem;
+    // border-bottom: 2px;
+
+    & > .grid_1{
+      width: 25.5rem;
+
+      & > .text_h5{
+        margin-top: 1rem;
+
+        & > h5{
+          font-size: 1.15vmax;
+          font-family: 'Poppins';
+          font-style: italic;
+          font-weight: 300;
+          line-height: 1.5rem;
+          display: flex;
+          align-items: center;
+          color: #FFFFFF;
+        }
+
+      }
+
+      & > .fsocials{
+          margin-top: 1rem;
+      }
+  
+    }
+
+    // ======Second section=====
+    div.comp_info, div.prod_info, div.contact_info{
+
+      & > h3{
+        font-size: 1.25rem;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.875rem;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+      }
+  
+      & > ul{
+          margin-top: 1.5rem;
+
+        & > li{
+          font-size: 1rem;
+          font-family: 'Sora';
+          font-style: normal;
+          font-weight: 400;
+          line-height: 35px;
+          // height: 40px;
+          display: flex;
+          align-items: center;
+
+          color: #FFFFFF;
+
+          opacity: 0.8;
+        }
+      }
+  
+    }
+    
+    & > div.footer-border{
+      position: absolute;
+      border-bottom: 0.2px solid #D2D2D2;
+      width: 88%;
+      height: 0px;
+      bottom:  -23.3rem;
+      opacity: 0.7;
+    }
+
+    & > div.copyright{
+      position: absolute;
+      bottom: -27rem;
+      font-family: 'Sora';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      display: flex;
+      align-items: center;
+      color: #FFFFFF;
+      opacity: 0.8;
+    }
+
+  }
+  
+ 
+}

@@ -4,6 +4,7 @@ import { Stores } from './Stores';
 import mobile_logo from '../assets/mobile_sample.png';
 import dots_1_logo from '../assets/dots_1.svg';
 import dots_2_logo from '../assets/dots_2.svg';
+import { Footer } from '../footer/Footer';
 
 
 export const Header = () => {
@@ -40,7 +41,9 @@ export const Header = () => {
 							</div>
         </header>
 
-				<section className="benefits">
+				<Footer />
+
+				{/* <section className="benefits">
 					<div className="container">
 						<h2 className="">Earn More From Your Practive</h2>
 						<p className="">MedHealth empowers you to earn what your expertise deserves while helping Nigerians stay healthy</p>
@@ -55,7 +58,7 @@ export const Header = () => {
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> */}
       </main>
    
   )

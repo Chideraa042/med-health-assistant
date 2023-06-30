@@ -1,0 +1,172 @@
+div.doctor_profile{
+  // position: absolute;
+  background-color: var(--color-white);
+  // background-color: aqua;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  margin-left: 0px;
+  width: calc(100vw - 200px);div.doctor_profile{
+  // position: absolute;
+  background-color: var(--color-white);
+  // background-color: aqua;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+  margin-left: 0px;
+  width: calc(100vw - 200px);
+  height: calc(100vh + 12px);
+  // height: 100%;
+
+
+  &>main.profile_container{
+    // position: relative;
+    
+    &>div.profile_header{
+      position: absolute;
+      width: calc(90% - 0px);
+      height: 7rem;
+      margin-top: 2rem;
+      margin-left: 5%;
+      background: linear-gradient(90.74deg, #F9E3AB 34.2%, #F6D0CB 101.28%);
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    &>div.profile_body{
+      position: absolute;
+      width: calc(90% - 0px);
+      height: 31rem;
+      margin-top: 9rem;
+      margin-left: 5%;
+      background: #FBFCFD;
+      // box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+      border-radius: 0px 0px 10px 10px;
+      padding: 0 3rem 0 3rem;
+
+      &>.pofile_access{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6rem;
+
+        
+
+        &>.profile_contact{
+          display: flex;
+          gap: 1rem;
+        }
+      }
+
+      &>.about_profile{
+        margin-top: 3rem;
+
+      
+
+        p{
+          font-family: 'poppins';
+          font-style: normal;
+          font-weight: 400;
+        }
+
+      }
+
+      &>button.booked{
+        background-color: #0957DF;
+        border-radius: 0.5rem;
+        margin-top: 1.7rem;
+        width: 16rem;
+        height: 3rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+
+        &>span{
+          font-family: 'GT Walsheim Pro';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 2.5rem;
+          letter-spacing: 0.02em;
+          color: #FFFFFF;
+        }
+      }
+
+    }
+  }
+}
+
+  height: calc(100vh + 12px);
+  // height: 100%;
+
+
+  &>main.profile_container{
+    // position: relative;
+    
+    &>div.profile_header{
+      position: absolute;
+      width: calc(90% - 0px);
+      height: 7rem;
+      margin-top: 2rem;
+      margin-left: 5%;
+      background: linear-gradient(90.74deg, #F9E3AB 34.2%, #F6D0CB 101.28%);
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    &>div.profile_body{
+      position: absolute;
+      width: calc(90% - 0px);
+      height: 31rem;
+      margin-top: 9rem;
+      margin-left: 5%;
+      background: #FBFCFD;
+      // box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+      border-radius: 0px 0px 10px 10px;
+      padding: 0 3rem 0 3rem;
+
+      &>.pofile_access{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6rem;
+
+        
+
+        &>.profile_contact{
+          display: flex;
+          gap: 1rem;
+        }
+      }
+
+      &>.about_profile{
+        margin-top: 3rem;
+
+      
+
+        p{
+          font-family: 'poppins';
+          font-style: normal;
+          font-weight: 400;
+        }
+
+      }
+
+      &>button.booked{
+        background-color: #0957DF;
+        border-radius: 0.5rem;
+        margin-top: 1.7rem;
+        width: 16rem;
+        height: 3rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+
+        &>span{
+          font-family: 'GT Walsheim Pro';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 2.5rem;
+          letter-spacing: 0.02em;
+          color: #FFFFFF;
+        }
+      }
+
+    }
+  }
+}

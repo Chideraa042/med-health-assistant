@@ -3,11 +3,11 @@
 /* ===================================== */
 
 main.login_main {
-
+	// height: calc(100vh + 10rem);
+	// background-color: #1800A4;
   & > section.hero_login {
-		height: calc(100vh - 0px);
+		height: calc(100vh + 0px);
 		background-color: var(--color-blue);
-		// z-index: 100;
   
 		& > div.link-logo{
 			position: absolute;
@@ -52,8 +52,7 @@ main.login_main {
 			height: calc(100% - 0px);
 			background-image: url("../../components/assets/Background.svg");
 			background-repeat: no-repeat;
-			background-size: 100vmax   ;
-			// background-size: cover ;
+			background-size: cover ;
 			z-index: 5;  
 
       & > div.login_files {
@@ -65,8 +64,7 @@ main.login_main {
         position: relative;
         height: calc(100% - 0px);
         background-repeat: no-repeat;
-        background-size: 100vmax   ;
-        // z-index: 5; 
+        background-size: 100vmax;
         background-color: var(--color-blue);
       
 
@@ -80,7 +78,6 @@ main.login_main {
 				display: flex;
 				flex-direction: column;
 				gap: 30;
-				// background-color: rgba(255, 255, 255, 0.6);
 				
 				& > h3 {
 					font-size: 2.4vmax;
@@ -92,7 +89,7 @@ main.login_main {
 				& > h5 {
 					font-size: 1.2vmax;
 					font-weight: 400;
-					margin-top: 30px;
+					margin-top: 1.875rem;
 					color: rgba(98, 98, 98, 0.95);
 				}
 			}

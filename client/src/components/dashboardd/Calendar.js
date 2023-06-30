@@ -8,6 +8,7 @@ const socket = io("http://localhost:5000");
 export const Calendar = () => {
   const [events, setEvents] = useState([]);
   const [date, setDate] = useState(new Date());
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
 
   useEffect(() => {
     socket.on("new-event", (data) => {
@@ -46,6 +47,13 @@ export const Calendar = () => {
     ));
   };
 
+  useEffect(() => {
+    const eventsForMonth = events.filter((event) => {
+      return moment(event.date).isSame(date, "month");
+    });
+    setUpcomingEvents(eventsForMonth);
+  }, [date, events]);
+
   const handleNextMonth = () => {
     setDate(new Date(date.getFullYear(), date.getMonth() + 1, 1));
   };
@@ -61,8 +69,12 @@ export const Calendar = () => {
         <div className="calendar-header__title">
           <div className="month-year">{moment(date).format("MMMM YYYY")}</div>
           <div className="toggle-month">
-            <div className="toggle-month__prev" onClick={handlePrevMonth}>&#10094;</div>
-            <div className="toggle-month__next" onClick={handleNextMonth}>&#10095;</div>
+            <div className="toggle-month__prev" onClick={handlePrevMonth}>
+              &#10094;
+            </div>
+            <div className="toggle-month__next" onClick={handleNextMonth}>
+              &#10095;
+            </div>
           </div>
         </div>
         <div className="border"></div>
@@ -88,13 +100,22 @@ export const Calendar = () => {
       <div className="events">
         <div className="events__header">
           <h3>Upcoming</h3>
-          <a href="view-events">view all</a>
+          <a href="view-events">View all</a>
         </div>
-        
-        <div className="events__meet">
-            hedjdjddh
-        </div>
+        {upcomingEvents.length > 0 ? (
+          upcomingEvents.map((event) => (
+            <div key={event.id} className="event">
+              <div className="event-time">
+                {moment(event.date).format("hh:mm A")}
+              </div>
+              <div className="event-title">{event.title}</div>
+            </div>
+          ))
+        ) : (
+          <div className="no-events">No upcoming events</div>
+        )}
       </div>
+
 
     </div>
   );

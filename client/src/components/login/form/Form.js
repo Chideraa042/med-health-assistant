@@ -5,12 +5,15 @@ import './form.scss';
 import { Link } from 'react-router-dom';
 
 export const Form = () => {
-
   const [showLogin, setShowLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [idNumber, setIdNumber] = useState('');
+  const [address, setAddress] = useState('');
+  const [state, setState] = useState('');
+  const [country, setCountry] = useState('');
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -51,7 +54,11 @@ export const Form = () => {
         },
         body: JSON.stringify({
           email: email,
-          password: password
+          password: password,
+          idNumber: idNumber,
+          address: address,
+          state: state,
+          country: country
         })
       });
       const data = await response.json();
@@ -72,8 +79,8 @@ export const Form = () => {
   };
 
   return (
-    <div className="login">
-      <h2 >{showLogin ? 'Login to your account' : 'Create an account'}</h2>
+    <div className={`login ${showLogin ? '' : 'signup_page'}`}>
+      <h2>{showLogin ? 'Login to your account' : 'Create an account'}</h2>
       <form onSubmit={showLogin ? handleLoginSubmit : handleSignupSubmit}>
         {errorMessage && <div className="error">{errorMessage}</div>}
         <div className="form-group">
@@ -86,46 +93,89 @@ export const Form = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <div className="forgot">
-              <label>Password</label>
-              {showLogin ? (
-              <div className="forgot-password">
-                <a href="#top" onClick={handleForgotPassword}>Forgot?</a>
-              </div>
-              ) : null}
-          </div>
-         
-          <div className="password-input-container">
+        {!showLogin && (
+          <>
+            <div className="form-group">
+              <label>ID Number</label>
               <input
-                type={showPassword ? 'text' : 'password'}
-                id="password"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                type="text"
+                placeholder="Enter your ID number"
+                value={idNumber}
+                onChange={(e) => setIdNumber(e.target.value)}
                 required
               />
-              
-              {showLogin ? (
-                <div
-                  className="toggle-password-visibility"
-                  onClick={togglePasswordVisibility}
-                >
-                  <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
-                </div>
-              ) : null}
-              
-              
-          </div>
-
-        </div>
-
+            </div>
+            <div className="form-group">
+              <label>Address</label>
+              <input
+                type="text"
+                placeholder="Enter your address"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>State</label>
+              <input
+                type="text"
+                placeholder="Enter your state"
+                value={state}
+                onChange={(e) => setState(e.target.value)}
+                requiredg
+              />
+            </div>
+          </>
+        )}
         <div className="form-group">
-        <Link to="/dashboard"><button type="submit">{showLogin ? 'Login now' : 'Create account'}</button></Link>
-           {/* <button type="submit">{showLogin ? 'Login now' : 'Create account'}</button> */}
-        </div> 
-        
-        
+          <div className="forgot">
+            <label>Password</label>
+            {showLogin ? (
+              <div className="forgot-password">
+                <a href="#top" onClick={handleForgotPassword}>
+                  Forgot?
+                </a>
+              </div>
+            ) : null}
+          </div>
+          <div className="password-input-container">
+            <input
+              type={showPassword ? 'text' : 'password'}
+              id="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            {showLogin ? (
+              <div
+                className="toggle-password-visibility"
+                onClick={togglePasswordVisibility}
+              >
+                <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+              </div>
+            ) : null}
+          </div>
+        </div>
+        {!showLogin && (
+          <div className="form-group">
+            <label>Country</label>
+            <input
+              type="text"
+              placeholder="Enter your country"
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              required
+            />
+          </div>
+        )}
+        <div className="form-group">
+          <Link to="/dashboard/main">
+            <button type="submit">
+              {showLogin ? 'Login now' : 'Create account'}
+            </button>
+          </Link>
+        </div>
       </form>
       <div className="signup">
         {showLogin ? "Don't have an account?" : "Already have an account?"}{' '}
@@ -134,6 +184,5 @@ export const Form = () => {
         </a>
       </div>
     </div>
-  )
-}
-
+  );
+};

@@ -8,8 +8,7 @@ export const Logo = () => {
     <main className='med_logos_main'>
         <div className="med_logos">
           <img className='med_logo' src={medHealth} alt='medHealth_logo' />
-          <img className='med_name' src={medName} alt='medName_logo' />
-          
+          <img className='med_name' src={medName} alt='medName_logo' />   
         </div>
     </main>
   )

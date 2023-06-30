@@ -20,12 +20,25 @@ export const Navbar = () => {
   const location = useLocation();
   const { pathname } = location;
 
+  const navWitoutRoutes = [  
+    "/cal", 
+    "/dashboard", "/dashboard/main", 
+    "/doctors", "/dashboard/doctors", 
+
+    "/profileD1", "/dashboard/profileD1",
+    "/profileD2", "/dashboard/profileD2",
+    "/profileD3", "/dashboard/profileD3",
+    "/profileD4", "/dashboard/profileD4",
+    "/video", "/dashboard/video"
+  ];
+
   // Render the navbar only when the current path is not login, signup, or dashboard
-  const renderNavbar = pathname !== '/login' && pathname !== '/cal' && pathname !== '/dashboard';
+  // const renderNavbar = pathname !== '/login' && pathname !== '/cal' && pathname !== '/dashboard/*' && pathname !== '/dash' && pathname !== '/dashMain';
   
   return (
     <>
-      {renderNavbar && (
+      {!navWitoutRoutes.includes(pathname)
+        ? (
         <header className='navigations'>
       
           <Link to="/">
@@ -49,7 +62,10 @@ export const Navbar = () => {
           
           <button className='nav-btn nav-show-btn' onClick={showNavbar} ><FaBars /></button>
         </header>
-      )}
+      ) : (
+        <></>
+      )
+    }
     </>
   );
 };

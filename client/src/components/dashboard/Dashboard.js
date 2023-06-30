@@ -1,150 +1,150 @@
 import React, { useState } from 'react';
-import './dashboard.scss';
-import { Logo } from "../navbar/Logo";
-import { Link } from 'react-router-dom';
+import s from './dashboard.module.scss';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import doctor_img from '../assets/Doctors_pic.svg';
-import { Calendar } from '../dashboardd/Calendar';
+
+import profile_pic from '../assets/profile_pic.svg';
+import search_icon from '../assets/search_icon.svg';
+import notify_icon from '../assets/notify_icon.svg';
+import vector_1_img from '../assets/vector_1.svg';
+import vector_2_img from '../assets/vector_2.svg';
+import vector_3_img from '../assets/vector_3.svg';
+import vector_4_img from '../assets/vector_4.svg';
+
+import medHealth from '../assets/med_health_log.svg';
+import medName from '../assets/med_name_log.svg';
+
 
 export const Dashboard = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+
+  const navigate = useNavigate();
 
 
+  const [isOpened, setIsOpened] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+  const toggleDropdown = () => {
+    setIsOpened(!isOpened);
   };
 
-  const closeSidebar = () => {
-    setIsOpen(false);
+  const handleSearch = () => {
+    // Perform the search request using the searchTerm
+    console.log('Search term:', searchTerm);
+    // You can make an API call or perform any necessary backend operation here
   };
 
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
+  // =======ROUTE NAV========
+
+  const handleNavigate = () => {
+    navigate('/dashboard/doctors');
   };
 
 
   return (
-    <div className="container">
-      <header>
-        <div>
-          <button onClick={toggleSidebar}>&#9776;</button>
-        </div>
-      </header>
-      <main className={isOpen ? 'content--open' : ''}>
-        {/* Dashboard Section */}
-          <div className="mainn-contents">
-              <div className="topp-bar">
-                  <div className="search-bar">
-                    <input
-                      type="text"
-                      placeholder="Search"
-                      value={searchTerm}
-                      onChange={handleSearch}
-                    />
-                  </div>
-                  <div className="notify">notification</div>
-              </div>
+    <div className={`${s.container}`}>
 
-              <div className="subb-contents">
-                <div className="subb-con_1">
-
-                  {/* DOCTORS SECTION */}
-                  <div className="doctors-display">
-                  <span>Good Morning<h3>Dr. Kim!</h3></span> 
-                  <div className="doc_img">
-                        <img className='doctor' src={doctor_img} alt='mobileApp_sample' />
-                    </div>
-                    <div className="doctor-card">
-                  
-                      <div className="doctor-info">
-                        <h3 className="doctor-name">Dr. John Doe</h3>
-                        <p className="doctor-specialty">Cardiologist</p>
-                        <p className="doctor-contact">john.doe@hospital.com</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* PATIENT LIST AND CONSULTATION */}
-                  <div className="pat-con">
-                  {/* ------------------ */}
-                    <div className="patients-list">
-                          <div className="list-gap">
-                            <h2>Patient List</h2>
-                            <span>Today</span>
-                          </div>
-                          
-                          <ul>
-                            <li className="patient-item">
-                              <div className="patient-name">John Doe</div>
-                              <div className="patient-status">In Progress</div>
-                            </li>
-                            <li className="patient-item">
-                              <div className="patient-name">Jane Smith</div>
-                              <div className="patient-status">Completed</div>
-                            </li>
-                            <li className="patient-item">
-                              <div className="patient-name">Bob Johnson</div>
-                              <div className="patient-status">Scheduled</div>
-                            </li>
-                          </ul>
-                    </div>
-
-                    {/* --------------------- */}
-                    <div className="consultation">
-                        <h2>Consultation</h2>
-                        <div className="consultation-details">
-                          <p>Consultation details go here</p>
-                        </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div className="subb-con_2">
-                {/* CALENDER DISPLAY */}
-                  <div className="calendar">
-                    <Calendar />
-                  </div>
-                </div>
-             
-              </div>
-          </div> 
-
-      </main>
-
-      {/* SIDENAV SECTION */}
-      <aside className={isOpen ? 'sidebar--open' : ''}>
-        <div className="top">
-          <button onClick={closeSidebar}>&#10094;</button>
-        </div>
-        <div className="general-overview">
-            <div className="linkk-log">
-                <Link  to="/"><Logo /></Link>
+       {/* SIDENAV SECTION */}
+        
+        <div className={`${s.general_overview}`}>
+            <div className={`${s.linkk_log}`}>
+              <Link to='/'>
+                <img className={`${s.medd_logo}`} src={medHealth} alt='medHealth_logo' />
+                <img className={`${s.medd_name}`} src={medName} alt='medName_logo' />  
+              </Link> 
             </div>
             
-            <h5 className='dash-b'><FontAwesomeIcon icon={faHome} /> Dashboard</h5>
+            <h5 className={`${s.dash_b}`}><FontAwesomeIcon icon={faHome} /> Dashboard</h5>
 
             <h4>Appointment</h4>
                 <ul>
-                  <li>Book Appointment</li>
-                  <li>My Calender</li>
-                  <li>Gebetszeiten</li>
-                  <li>Benachrichtigung</li>
+                  <li className={`${s.vector}`}>
+                    <img className={`${s.vector_1}`} src={vector_1_img} alt='vector_1_sample' /> 
+                    <p onClick={handleNavigate}>Book Appointment</p>
+                  
+                  </li>
+                  <li className={`${s.vector}`}>
+                    <img className={`${s.vector_2}`} src={vector_2_img} alt='vector_2_sample' />
+                    <p>My Calender</p>
+                  </li>
+                  <li>
+                    <img className={`${s.vector_3}`} src={vector_3_img} alt='vector_3_sample' />
+                    <p>Gebetszeiten</p>
+                  </li>
+                  <li>
+                    <img className={`${s.vector_4}`} src={vector_4_img} alt='vector_4_sample' />
+                    <p>Benachrichtigung</p>
+                  </li>
                 </ul>
             
-            <h4 className="h4-2">General</h4>
-                <ul className="ul-2">
-                  <li>My File</li>
-                  <li>Symptom Checker</li>
-                  <li>Gebetszeiten</li>
-                  <li>Benachrichtigung</li>
-                </ul>
+            <h4 className={`${s.h4_2}`}>General</h4>
+                <ul className={`${s.ul_2}`}>
+                  <li>
+                    <img className={`${s.vector_1}`} src={vector_1_img} alt='vector_1_sample' />
+                    <p>My File</p>
+                  </li>
+                  <li>
+                    <img className={`${s.vector_2}`} src={vector_2_img} alt='vector_2_sample' />
+                    <p>Symptom Checker</p>
+                  </li>
+                  <li>
+                    <img className={`${s.vector_3}`} src={vector_3_img} alt='vector_3_sample' />
+                    <p>Gebetszeiten</p>
+                  </li>
+                  <li>
+                    <img className={`${s.vector_4}`} src={vector_4_img} alt='vector_4_sample' />
+                    <p>Benachrichtigung</p>
+                  </li>
+                </ul>              
         </div> 
-      </aside>
+        
+        <main className={`${s.mainn_contents}`}>
+                <div className={`${s.topp_bar}`}>
+
+                {/* Search bar */}
+                <div className={`${s.search_bar}`}>
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                  <button onClick={handleSearch}>
+                    <img src={search_icon} alt="search" />
+                  </button>
+                </div>
+
+                {/* Notifications */}
+                <div className={`${s.notification_bar}`}>
+                  <div className={`${s.notification_icon}`}>
+                    <img src={notify_icon} alt="notification" />
+                  </div>
+                  <div className={`${s.profile}`} onClick={toggleDropdown}>
+                    <img src={profile_pic} alt="Profile" />
+                    <div className={` ${s.dropdown}  ${isOpened ? `${s.open}` : ''}`}>
+                      <div className={`${s.profile_details}`}>
+                        <p>General Profile Details</p>
+                      </div>
+                      <div className={`${s.logout}`}>
+                        <p>Logout</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <Outlet />
+
+              </main>
       {/* =========== */}
+
+        {/* Dashboard Section */}
+          
+
+     
 
     </div>
   );

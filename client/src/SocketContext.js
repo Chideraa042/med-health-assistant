@@ -5,7 +5,7 @@ import Peer from 'simple-peer';
 const SocketContext = createContext();
 
 // const socket = io('http://localhost:5000');
-const socket = io('http://192.168.43.126:5000');
+const socket = io('http://192.168.43:5000');
 
  const ContextProvider = ({ children }) => {
     const [ stream, setStream ] = useState(null);

@@ -4,29 +4,31 @@
   justify-content: center;
   align-items: center;
   padding: 48px 72px;
-  gap: 25px;
+  gap: 1.56rem;
   z-index: 6;
 
   position: absolute;
-  width: 460px;
-  height: 400px;
-  left: 790px;
-  top: 160px;
+  // width: 28.75rem;
+  // height: 25rem;
+  width: 35.94vmax;
+  height: 29.5vmax;
+  left: 49.3rem;
+  top: 10rem;
   background: #FFFFFF;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
   
 
   h2 {
-    width: 267px;
-    height: 28px;
+    width: 16.69rem;
+    height: 1.75rem;
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 100%;
-    margin-top: 15px;
+    margin-top: 0.94rem;
     // padding: 50px;
 
     text-align: center;
@@ -39,26 +41,26 @@
       display: flex;
       justify-content: space-between;
       // margin-bottom: 5px;
-      margin-top: 15px;
+      // margin-top: 0.94rem; //=====Additional password marin=======//
       color: #5A5A5D;
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1rem;
     
     }
     .form-group {
-      // margin-bottom: 20px;
+      margin-top: 0.94rem;
 
     &> label {
         display: block;
-        margin-bottom: 5px;
-        height: 16px;
+        margin-bottom: 0.31rem;
+        height: 1rem;
 
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 100%;
         display: flex;
         align-items: center;
@@ -71,14 +73,15 @@
         flex-direction: row;
         align-items: center;
         padding: 12px 16px;
-        gap: 5px;
-        height: 48px;
-        border-radius: 8px;
+        gap: 0.31rem;
+        height: 3rem;
+        border-radius: 0.5rem;
         width: 100%;
         // padding: 10px;
         border: 1px solid #ccc;
+        // margin-top: 0.94rem;
         
-        font-size: 16px;
+        font-size: 1rem;
         outline: none;
 
         flex: none;
@@ -104,10 +107,10 @@
       
       .password-input-container div {
         position: absolute;
-        top: 10px;
+        top: 0.625rem;
         right: 0;
         bottom: 0;
-        width: 30px;
+        width: 1.875rem;
         background-color: transparent;
         border: none;
         outline: none;
@@ -120,11 +123,10 @@
       button{
         font-style: normal;
         color: #fff;
-        font-size: 16px;
+        font-size: 1rem;
         font-family: 'Poppins';
         font-weight: 600;
         line-height: 100%;
-        height: 16px;
 
         border: none;
         cursor: pointer;
@@ -132,15 +134,15 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 15px;
-        gap: 5px;
-        margin-top: 28px;
+        padding: 0.94rem;
+        gap: 0.31rem;
+        margin-top: 1.75rem;
 
         width: 22rem;
         height: 3.25rem;
 
         background: #0957DF;
-        border-radius: 8px;
+        border-radius: 0.5rem;
 
         &:hover {
           background-color: #005fa3;
@@ -169,18 +171,58 @@
 
   div.signup {
     margin-top: 0px;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #BEBEBF;
     text-align: center;
-    height: 16px;
+    height: 1rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 100%;
 
     span {
-      margin-right: 5px;
+      margin-right: 0.31rem;
     }
   }
+
+
+// ========Sin up pae for new users==============//
+
+  &.signup_page{
+    // background: #c51010;
+    height: 46.5vmax;
+    top: 0.9rem;
+    gap: 0.7rem;
+
+    form {
+      .form-group {
+        margin-top: 0.85rem;
+  
+        &> label {
+          margin-bottom: 0.31rem;
+          // height: 1rem;
+          font-weight: 400;
+          font-size: 0.9rem;
+          line-height: 100%;
+        }
+
+        input {
+          padding: 12px 16px;
+          gap: 0.31rem;
+          height: 2.7rem;
+          font-size: 0.9rem;
+        }
+
+        button{
+          font-size: 1rem;
+          margin-top: 1rem;
+          height: 2.9rem;
+        }
+      }
+    }
+// =====//
+  }
 }
+
+
