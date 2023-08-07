@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import './form.scss';
@@ -12,8 +12,8 @@ export const Form = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [idNumber, setIdNumber] = useState('');
   const [address, setAddress] = useState('');
-  const [state, setState] = useState('');
-  const [country, setCountry] = useState('');
+  // const [state, setState] = useState('');
+  // const [country, setCountry] = useState('');
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -57,8 +57,8 @@ export const Form = () => {
           password: password,
           idNumber: idNumber,
           address: address,
-          state: state,
-          country: country
+          // state: state,
+          // country: country
         })
       });
       const data = await response.json();
@@ -115,7 +115,7 @@ export const Form = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label>State</label>
               <input
                 type="text"
@@ -124,7 +124,7 @@ export const Form = () => {
                 onChange={(e) => setState(e.target.value)}
                 requiredg
               />
-            </div>
+            </div> */}
           </>
         )}
         <div className="form-group">
@@ -157,7 +157,7 @@ export const Form = () => {
             ) : null}
           </div>
         </div>
-        {!showLogin && (
+        {/* {!showLogin && (
           <div className="form-group">
             <label>Country</label>
             <input
@@ -168,7 +168,7 @@ export const Form = () => {
               required
             />
           </div>
-        )}
+        )} */}
         <div className="form-group">
           <Link to="/dashboard/main">
             <button type="submit">
@@ -178,11 +178,27 @@ export const Form = () => {
         </div>
       </form>
       <div className="signup">
-        {showLogin ? "Don't have an account?" : "Already have an account?"}{' '}
-        <a href="#top" onClick={() => setShowLogin(!showLogin)}>
-          {showLogin ? 'Sign Up' : 'Log In'}
-        </a>
+
+        <div className="signup_flex">
+          {showLogin ? "Don't have an account?" : "Already have an account?"}{' '}
+          <a href="#top" onClick={() => setShowLogin(!showLogin)}>
+            {showLogin ? 'Sign Up' : 'Log In'}
+          </a>
+        </div>
+
+        <div className="signup_flex">
+          {showLogin ? "Are you a professional?" : ""}{' '}
+          <a href="/proLogin" onClick={() => setShowLogin(!showLogin)}>
+            {showLogin ? 'Log In' : ''}
+          </a>
+        </div>
+        
       </div>
+
+      {/* <div className="signup">
+        
+      </div> */}
+
     </div>
   );
 };

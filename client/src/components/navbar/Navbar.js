@@ -20,8 +20,10 @@ export const Navbar = () => {
   const location = useLocation();
   const { pathname } = location;
 
-  const navWitoutRoutes = [  
-    "/cal", 
+  const navWithoutRoutes = [  
+    "/cal", "/telecom",
+    "/docDashboard", "/docDashboard/docMain",
+   
     "/dashboard", "/dashboard/main", 
     "/doctors", "/dashboard/doctors", 
 
@@ -29,7 +31,9 @@ export const Navbar = () => {
     "/profileD2", "/dashboard/profileD2",
     "/profileD3", "/dashboard/profileD3",
     "/profileD4", "/dashboard/profileD4",
-    "/video", "/dashboard/video"
+    "/video", "/dashboard/video",
+    "/videoConf", "/dashboard/videoConf"
+
   ];
 
   // Render the navbar only when the current path is not login, signup, or dashboard
@@ -37,7 +41,7 @@ export const Navbar = () => {
   
   return (
     <>
-      {!navWitoutRoutes.includes(pathname)
+      {!navWithoutRoutes.includes(pathname)
         ? (
         <header className='navigations'>
       

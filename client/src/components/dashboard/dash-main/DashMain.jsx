@@ -1,7 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import s from'./dashMain.module.scss';
 
-import doctor_img from '../../assets/Doctors_pic.svg';
+import patient_img from '../../assets/patientPic.svg';
+import message_img from '../../assets/message.svg';
+import phone_img from '../../assets/phone.svg';
 
 import { Calendar } from '../../dashboardd/Calendar';
 
@@ -11,15 +13,20 @@ import icon_img2 from '../../assets/diagnostics.svg';
 import icon_img3 from '../../assets/nearby.svg';
 import icon_img4 from '../../assets/h_report.svg';
 
-import bullish_rate from '../../assets/bullish.svg';
-import bearish_rate from '../../assets/bearish.svg';
+// Consultation
+import DW_img from '../../assets/DW.svg';
+import selPat_img from '../../assets/sel_pat.svg';
+import fever_img from '../../assets/fever.svg';
+import cough_img from '../../assets/cough.svg';
+import heart_img from '../../assets/heart.svg';
+
 
 
 export const DashMain = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate('/dashboard/video');
+    navigate('/dashboard/videoConf');
   };
 
 
@@ -33,53 +40,40 @@ export const DashMain = () => {
 
               {/* ============ DOCTORS SECTION ============= */}
               <div className={`${s.doctors_display}`}>
-                <span>Good Morning<h3>Mr. Divine!</h3></span> 
+                <span>Good Morning<h3>Mr. Johnson!</h3></span> 
               
                 <div className={`${s.doctor_card}`}>
 
-                  <div className={`${s.visits}`}>
-                      <h4>Visits for Today</h4>
-                      <span>104</span>
-                  </div>
+                {/* ========== PATIENTS IMAGE ============ */}
 
-                  <div className={`${s.patient_card}`}>
-                    {/* ===========NEW PATIENTS RATING ======= */}
-                    <div className={`${s.new_patients}`}>
-                        <div className={`${s.patient_text}`}>
-                            <h4>New patients</h4>
-                            <div className={`${s.patient_rate_01}`}>
-                                <span>40</span>
-                                <div className={`${s.patient_graph}`}>
-                                    <span>51%</span>
-                                    <img src={bullish_rate} alt="rate_scale" />
-                                </div>
-                            </div>
-                        </div>
-                        
+                  <div className={`${s.pat_bio}`}>
+                    <div className={`${s.pat_img}`}>
+                        <img className={`${s.doctor}`} src={patient_img} alt='patient_image' />
                     </div>
 
-                    {/* ===========OLD PATIENTS RATING ======= */}
-                    <div className={`${s.old_patients}`}>
-                        <div className={`${s.patient_text}`}>
-                            <h4>Old patients</h4>
-                            <div className={`${s.patient_rate_02}`}>
-                                <span>60</span>
-                                <div className={`${s.patient_graph}`}>
-                                    <span>20%</span>
-                                    <img src={bearish_rate} alt="rate_scale" />
-                                </div>
-                            </div>
-                        </div>
-                        
+                    <div className={`${s.pat_descript}`}>
+                      <h5 style={{lineHeight: 2.6, fontSize: '1.1rem', marginTop: '-1rem', fontWeight: 500}} >Johnson Winston</h5>
+                      <p>Father of 4, 162lbs, 5’7, Married to Annie Winston</p>
+                      <p><p style={{fontWeight: 500}}>Address:</p> Aguero kimbely streets, Lagos state, Nigeria.</p>
+                      <p><p style={{fontWeight: 500}}>Next of Kin:</p> Asher Winston; +23461-223-3398</p>
                     </div>
                   </div>
 
-                {/* ========== DOCTORS IMAGE ============ */}
-
-                  <div className={`${s.doc_img}`}>
-                      <img className={`${s.doctor}`} src={doctor_img} alt='doctor_image' />
+                  <div className={`${s.pat_contacts}`}>
+                    <div className={`${s.message_phone}`}>
+                      <img className={`${s.p_mail}`} src={message_img} alt='message_image' />
+                      <p>johnsonWinston@hotmmail.com</p>
+                    </div>
+                    
+                    <div className={`${s.message_phone}`} >
+                      <img className={`${s.p_phone}`} src={phone_img} alt='phone_image' />
+                      <p>+234-810-611-2399</p>
+                    </div>
                   </div>
+                  
+
                 </div>
+
               </div>
 
               {/* ========= PATIENT LIST AND CONSULTATION =========== */}
@@ -117,7 +111,7 @@ export const DashMain = () => {
                       </ul>
                 </div>
 
-                {/* --------------------- */}
+                {/* ===============CONSULTATION================== */}
                 <div className={`${s.consultation}`}>
                     <div className={`${s.list_gap}`}>
                       <h2>Consultation</h2>
@@ -126,6 +120,50 @@ export const DashMain = () => {
                     
                     <div className={`${s.consultation_details}`}>
                       {/* <p>Consultation details go here</p> */}
+                      <div className={`${s.DW_section}`}>
+                        <div className={`${s.icon_name}`}>
+                          <img className={`${s.DW_icon}`} src={DW_img} alt='DW_image'/>
+                          <div className={`${s.icon_age}`} >
+                            <h4>Denzel White</h4>
+                            <p>Male - 28 Years 3 Months</p>
+                          </div>
+                        </div>
+
+                        <img className={`${s.selPat_icon}`} src={selPat_img} alt='selPat_image'/>
+                      </div>
+                      
+                      <div className={`${s.symptoms}`}>
+                        <div className={`${s.symp_icon}`}>
+                          <img className={`${s.fever_icon}`} src={fever_img} alt='fever_image'/>
+                          <p>Fever</p>
+                        </div>
+
+                        <div className={`${s.symp_icon}`}>
+                          <img className={`${s.cough_icon}`} src={cough_img} alt='cough_image'/>
+                          <p>Cough</p>
+                        </div>
+
+                        <div className={`${s.symp_icon}`}>
+                          <img className={`${s.heart_icon}`} src={heart_img} alt='heart_image'/>
+                          <p>Heart Burn</p>
+                        </div>
+                      </div>
+
+                      <div className={`${s.illness_description}`}>
+                        <div className={`${s.ill_checker}`}>
+                          <h5 style={{fontSize: '0.7rem'}} >Last Checked</h5>
+                          <p>Dr Everly on 21 April 2021 Prescription #2J983KT0</p>
+                        </div>
+                        <div className={`${s.ill_checker}`}>
+                          <h5>Observation</h5>
+                          <p>High fever and cough at normal hemoglobin levels. </p>
+                        </div>
+                        <div className={`${s.ill_checker}`}>
+                          <h5>Prescription</h5>
+                          <p>Paracetmol - 2 times a day Dizopam - Day and Night</p>
+                        </div>
+                      </div>
+                      
                     </div>
                 </div>
 

@@ -11,9 +11,9 @@
   // width: 28.75rem;
   // height: 25rem;
   width: 35.94vmax;
-  height: 31.2vmax;
+  height: 34.5vmax;
   left: 49.3rem;
-  top: 9rem;
+  top: 8rem;
   background: #FFFFFF;
   border-radius: 0.5rem;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
@@ -29,10 +29,7 @@
     font-size: 1.25rem;
     line-height: 100%;
     margin-top: 0.94rem;
-    // padding: 50px;
-
     text-align: center;
-    // margin-bottom: 0px;
     color: #101012;
   }
 
@@ -49,7 +46,7 @@
       font-size: 1rem;
     
     }
-    .form-group {
+    .form_group {
       margin-top: 0.94rem;
 
     &> label {
@@ -77,10 +74,7 @@
         height: 3rem;
         border-radius: 0.5rem;
         width: 100%;
-        // padding: 10px;
-        border: 1px solid #ccc;
-        // margin-top: 0.94rem;
-        
+        border: 1px solid #ccc;        
         font-size: 1rem;
         outline: none;
 
@@ -97,15 +91,15 @@
 
       //=========CODE FOR EYE ICON==============
 
-      .password-input-container {
+      .password_input_container {
         position: relative;
       }
       
-      .password-input-container input {
+      .password_input_container input {
         padding-right: 30px; /* add space for eye icon */
       }
       
-      .password-input-container div {
+      .password_input_container div {
         position: absolute;
         top: 0.625rem;
         right: 0;
@@ -152,12 +146,9 @@
   }
 
 
-  .forgot-password,
-  .signup {
-    
-    // display: flex;
-    // align-items: center;
-    // gap: 8px;
+  .forgot_password,
+  .signup
+  {
 
     a {
       color: #007DFA;
@@ -169,12 +160,10 @@
     }
   }
 
-  div.signup {
+  &>div.signup {
     display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+    margin-top: 0px;
     font-size: 0.875rem;
     color: #BEBEBF;
     text-align: center;
@@ -185,53 +174,11 @@
     font-size: 1rem;
     line-height: 100%;
 
-    div.signup_flex{
-      display: flex;
-      gap: 0.4rem;
-    }
-
     span {
       margin-right: 0.31rem;
     }
   }
 
-
-// ========Sin up pae for new users==============//
-
-  &.signup_page{
-    // background: #c51010;
-    height: 38vmax;
-    top: 5rem;
-    gap: 0.7rem;
-
-    form {
-      .form-group {
-        margin-top: 0.85rem;
-  
-        &> label {
-          margin-bottom: 0.31rem;
-          // height: 1rem;
-          font-weight: 400;
-          font-size: 1rem;
-          line-height: 100%;
-        }
-
-        input {
-          padding: 12px 16px;
-          gap: 0.31rem;
-          height: 3rem;
-          font-size: 0.9rem;
-        }
-
-        button{
-          font-size: 1rem;
-          margin-top: 1rem;
-          height: 2.9rem;
-        }
-      }
-    }
-// =====//
-  }
 }
 
 

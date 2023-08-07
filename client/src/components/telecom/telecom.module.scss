@@ -1,0 +1,36 @@
+.telecom{
+  display: flex;
+  gap: 1rem;
+
+  .btn{
+    width: 7.1rem;
+    height: 2.2rem;
+    flex-shrink: 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    // ---
+    border-radius: 0.37625rem;
+    background-color: #5188FD;
+
+    &>img{
+      width: 1rem;
+      height: 1rem;
+      flex-shrink: 0;
+      color: #FFFFFF;
+    }
+
+    &>p{
+      color: #FFF;
+      text-align: center;
+      font-family: GT Walsheim Pro;
+      font-size: 0.84663rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.88138rem;
+    }
+  }
+
+}

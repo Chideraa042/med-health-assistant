@@ -1,4 +1,5 @@
 import React from 'react'
+import { Telecom } from '../../components/telecom/Telecom';
 import s from './doctor1Profile.module.scss';
 
 export const Doctor1Profile = () => {
@@ -19,10 +20,8 @@ export const Doctor1Profile = () => {
               </ul>
             </div>
 
-            <div className={` ${s.profile_contact}`}>
-              <button><span>Voice Call</span></button>
-              <button><span>Video Call</span></button>
-              <button><span>Message</span></button>
+            <div className={`${s.tel_com}`}>
+              <Telecom />
             </div>
 
           </div>
